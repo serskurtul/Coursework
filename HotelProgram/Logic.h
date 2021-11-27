@@ -121,22 +121,22 @@ namespace DataBase {
 	}
 	
 
-	int GetDays(Date date) {
-		int days;
-		int daysinmonth[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
-		for (int i = 0; i < date.month; i++) {
-			days += daysinmonth[i];
-		}
-		return days;
-	}
-	int GetDays(System::DateTime date) {
-		int days;
-		int daysinmonth[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
-		for (int i = 0; i < date.Month; i++) {
-			days += daysinmonth[i];
-		}
-		return days;
-	}
+	//int GetDays(Date date) {
+	//	int days;
+	//	int daysinmonth[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	//	for (int i = 0; i < date.month; i++) {
+	//		days += daysinmonth[i];
+	//	}
+	//	return days;
+	//}
+	//int GetDays(System::DateTime date) {
+	//	int days;
+	//	int daysinmonth[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	//	for (int i = 0; i < date.Month; i++) {
+	//		days += daysinmonth[i];
+	//	}
+	//	return days;
+	//}
 	void introduction(Record record, std::string path = PATH_TO_DataBase) {
 		std::ofstream f;
 		f.open(path, std::ios_base::app | std::ios_base::binary);

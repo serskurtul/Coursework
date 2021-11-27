@@ -2,6 +2,12 @@
 #include "GuestInfo.h"
 #include "Logic.h"
 
+enum Status {
+	Free,
+	Busy,
+	Reserved
+};
+
 namespace HotelProgram {
 
 	using namespace System;
@@ -50,9 +56,10 @@ namespace HotelProgram {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::Label^ label6;
-
-
-
+	public:	bool mode; // mode 0 - color red; 1 - yellow
+		  int number;
+		  
+		Status status;
 	private:
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -131,6 +138,8 @@ namespace HotelProgram {
 			// 
 			// textBox2
 			// 
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Constantia", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->textBox2->Location = System::Drawing::Point(287, 181);
 			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
@@ -220,26 +229,55 @@ namespace HotelProgram {
 
 		}
 #pragma endregion
+
 	private: System::Void RoomInfo_Load(System::Object^ sender, System::EventArgs^ e) {
-		Admin::Room room = Info::GetRoom(Info::number);
+		Admin::Room room = Info::GetRoom(number);
 		label1->Text += gcnew String(Info::datestr.c_str());
 		textBox1->Text = room.number.ToString();
 		textBox2->Text = gcnew System::String(room.description);
 		textBox5->Text = gcnew  System::String(room.price.ToString());
 		if (room.nonavaible) {
 			textBox3->Text = "Недоступно";
-		} // ТРЕБА ПЕРЕВІКУ СТАНУ
+		}
+		else { switch (status) {
+		case Status::Busy:
+			textBox3->Text = "Зайнято";
+			break;
+		case Status::Reserved:
+			textBox3->Text = "Зарезервовано";
+			break;
+		default:
+			textBox3->Text = "Вільно";
+		} }
 		std::vector<DataBase::Record> records;
-		if (DataBase::FindGuests(Info::number, records)) {
-			for (int i = 0; i < records.size(); i++) {
-				System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
-				System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
-				System::DateTime date(Info::date.year, Info::date.month, Info::date.day);
-				if (date >= arr && date <= dep){
-					record = records[i];
+		if (DataBase::FindGuests(number, records)) {
+			switch (mode) {
+			case 0:
+				for (int i = 0; i < records.size(); i++) {
+					System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
+					System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+					System::DateTime date(Info::date.year, Info::date.month, Info::date.day);
+					if (date >= arr && date <= dep) {
+						record = records[i];
+						button1->Visible = true;
+						return;
+					}
+				}
+				break;
+			case 1:
+				for (int i = 0; i < records.size(); i++) {
+					System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+					System::DateTime date(Info::date.year, Info::date.month, Info::date.day);
+					if (date < arr) {
+						record = records[i];
+						button1->Visible = true;
+						return;
+					}
 				}
 			}
-			button1->Visible = true;
+				
+
+			
 		}
 	}
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {

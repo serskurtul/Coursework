@@ -76,32 +76,34 @@ namespace HotelProgram {
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(372, 200);
+			this->textBox3->Location = System::Drawing::Point(329, 197);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
-			this->textBox3->Size = System::Drawing::Size(260, 44);
+			this->textBox3->Size = System::Drawing::Size(237, 44);
 			this->textBox3->TabIndex = 13;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(372, 142);
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Constantia", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox2->Location = System::Drawing::Point(329, 139);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(260, 44);
+			this->textBox2->Size = System::Drawing::Size(381, 40);
 			this->textBox2->TabIndex = 12;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(372, 86);
+			this->textBox1->Location = System::Drawing::Point(329, 83);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(100, 44);
+			this->textBox1->Size = System::Drawing::Size(83, 44);
 			this->textBox1->TabIndex = 11;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(63, 203);
+			this->label4->Location = System::Drawing::Point(34, 203);
 			this->label4->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(132, 37);
@@ -111,7 +113,7 @@ namespace HotelProgram {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(63, 142);
+			this->label3->Location = System::Drawing::Point(34, 142);
 			this->label3->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(69, 37);
@@ -121,7 +123,7 @@ namespace HotelProgram {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(63, 86);
+			this->label2->Location = System::Drawing::Point(34, 86);
 			this->label2->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(107, 37);
@@ -133,7 +135,7 @@ namespace HotelProgram {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Constantia", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(61, 22);
+			this->label1->Location = System::Drawing::Point(146, 9);
 			this->label1->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(411, 49);
@@ -143,7 +145,7 @@ namespace HotelProgram {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(63, 265);
+			this->label5->Location = System::Drawing::Point(34, 265);
 			this->label5->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(215, 37);
@@ -153,7 +155,7 @@ namespace HotelProgram {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(63, 322);
+			this->label6->Location = System::Drawing::Point(34, 322);
 			this->label6->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(272, 37);
@@ -162,18 +164,18 @@ namespace HotelProgram {
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(372, 258);
+			this->textBox4->Location = System::Drawing::Point(329, 255);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(260, 44);
+			this->textBox4->Size = System::Drawing::Size(237, 44);
 			this->textBox4->TabIndex = 17;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(372, 319);
+			this->textBox5->Location = System::Drawing::Point(329, 316);
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->ReadOnly = true;
-			this->textBox5->Size = System::Drawing::Size(260, 44);
+			this->textBox5->Size = System::Drawing::Size(237, 44);
 			this->textBox5->TabIndex = 18;
 			// 
 			// GuestInfo
