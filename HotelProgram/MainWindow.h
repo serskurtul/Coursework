@@ -103,10 +103,6 @@ namespace HotelProgram {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->Guests = (gcnew System::Windows::Forms::Button());
-			this->main = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->room15 = (gcnew System::Windows::Forms::Button());
 			this->room14 = (gcnew System::Windows::Forms::Button());
 			this->room13 = (gcnew System::Windows::Forms::Button());
@@ -124,6 +120,10 @@ namespace HotelProgram {
 			this->room1 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->monthCalendar1 = (gcnew System::Windows::Forms::MonthCalendar());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->Guests = (gcnew System::Windows::Forms::Button());
+			this->main = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -139,11 +139,11 @@ namespace HotelProgram {
 			this->tabPage2->Controls->Add(this->button4);
 			this->tabPage2->Controls->Add(this->button1);
 			this->tabPage2->Controls->Add(this->dataGridView1);
-			this->tabPage2->Location = System::Drawing::Point(4, 33);
+			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Margin = System::Windows::Forms::Padding(4);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(4);
-			this->tabPage2->Size = System::Drawing::Size(1422, 576);
+			this->tabPage2->Size = System::Drawing::Size(1422, 584);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			// 
@@ -258,6 +258,238 @@ namespace HotelProgram {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"tabPage1";
 			// 
+			// room15
+			// 
+			this->room15->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room15->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room15->Location = System::Drawing::Point(931, 398);
+			this->room15->Name = L"room15";
+			this->room15->Size = System::Drawing::Size(140, 140);
+			this->room15->TabIndex = 58;
+			this->room15->Text = L"15";
+			this->room15->UseVisualStyleBackColor = true;
+			this->room15->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room14
+			// 
+			this->room14->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room14->BackColor = System::Drawing::Color::DarkGray;
+			this->room14->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room14->Location = System::Drawing::Point(754, 398);
+			this->room14->Name = L"room14";
+			this->room14->Size = System::Drawing::Size(140, 140);
+			this->room14->TabIndex = 57;
+			this->room14->Text = L"14";
+			this->room14->UseVisualStyleBackColor = false;
+			this->room14->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room13
+			// 
+			this->room13->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room13->BackColor = System::Drawing::Color::PaleGreen;
+			this->room13->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room13->Location = System::Drawing::Point(577, 398);
+			this->room13->Name = L"room13";
+			this->room13->Size = System::Drawing::Size(140, 140);
+			this->room13->TabIndex = 56;
+			this->room13->Text = L"13";
+			this->room13->UseVisualStyleBackColor = false;
+			this->room13->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room12
+			// 
+			this->room12->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room12->BackColor = System::Drawing::Color::LightCoral;
+			this->room12->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room12->Location = System::Drawing::Point(400, 398);
+			this->room12->Name = L"room12";
+			this->room12->Size = System::Drawing::Size(140, 140);
+			this->room12->TabIndex = 55;
+			this->room12->Text = L"12";
+			this->room12->UseVisualStyleBackColor = false;
+			this->room12->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room11
+			// 
+			this->room11->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room11->BackColor = System::Drawing::Color::PaleGoldenrod;
+			this->room11->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room11->Location = System::Drawing::Point(223, 398);
+			this->room11->Name = L"room11";
+			this->room11->Size = System::Drawing::Size(140, 140);
+			this->room11->TabIndex = 54;
+			this->room11->Text = L"11";
+			this->room11->UseVisualStyleBackColor = false;
+			this->room11->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room10
+			// 
+			this->room10->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room10->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room10->Location = System::Drawing::Point(931, 218);
+			this->room10->Name = L"room10";
+			this->room10->Size = System::Drawing::Size(140, 140);
+			this->room10->TabIndex = 53;
+			this->room10->Text = L"10";
+			this->room10->UseVisualStyleBackColor = true;
+			this->room10->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
+			// 
+			// room9
+			// 
+			this->room9->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room9->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room9->Location = System::Drawing::Point(754, 218);
+			this->room9->Name = L"room9";
+			this->room9->Size = System::Drawing::Size(140, 140);
+			this->room9->TabIndex = 52;
+			this->room9->Text = L"9";
+			this->room9->UseVisualStyleBackColor = true;
+			this->room9->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room8
+			// 
+			this->room8->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room8->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room8->Location = System::Drawing::Point(577, 218);
+			this->room8->Name = L"room8";
+			this->room8->Size = System::Drawing::Size(140, 140);
+			this->room8->TabIndex = 51;
+			this->room8->Text = L"8";
+			this->room8->UseVisualStyleBackColor = true;
+			this->room8->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room7
+			// 
+			this->room7->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room7->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room7->Location = System::Drawing::Point(400, 218);
+			this->room7->Name = L"room7";
+			this->room7->Size = System::Drawing::Size(140, 140);
+			this->room7->TabIndex = 50;
+			this->room7->Text = L"7";
+			this->room7->UseVisualStyleBackColor = true;
+			this->room7->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room6
+			// 
+			this->room6->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room6->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room6->Location = System::Drawing::Point(223, 218);
+			this->room6->Name = L"room6";
+			this->room6->Size = System::Drawing::Size(140, 140);
+			this->room6->TabIndex = 49;
+			this->room6->Text = L"6";
+			this->room6->UseVisualStyleBackColor = true;
+			this->room6->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room5
+			// 
+			this->room5->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room5->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room5->Location = System::Drawing::Point(931, 38);
+			this->room5->Name = L"room5";
+			this->room5->Size = System::Drawing::Size(140, 140);
+			this->room5->TabIndex = 48;
+			this->room5->Text = L"5";
+			this->room5->UseVisualStyleBackColor = true;
+			this->room5->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room4
+			// 
+			this->room4->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room4->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room4->Location = System::Drawing::Point(754, 38);
+			this->room4->Name = L"room4";
+			this->room4->Size = System::Drawing::Size(140, 140);
+			this->room4->TabIndex = 47;
+			this->room4->Text = L"4";
+			this->room4->UseVisualStyleBackColor = true;
+			this->room4->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room3
+			// 
+			this->room3->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room3->BackColor = System::Drawing::Color::Transparent;
+			this->room3->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room3->Location = System::Drawing::Point(577, 38);
+			this->room3->Name = L"room3";
+			this->room3->Size = System::Drawing::Size(140, 140);
+			this->room3->TabIndex = 46;
+			this->room3->Text = L"3";
+			this->room3->UseVisualStyleBackColor = false;
+			this->room3->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room2
+			// 
+			this->room2->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room2->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room2->Location = System::Drawing::Point(400, 38);
+			this->room2->Name = L"room2";
+			this->room2->Size = System::Drawing::Size(140, 140);
+			this->room2->TabIndex = 45;
+			this->room2->Text = L"2";
+			this->room2->UseVisualStyleBackColor = true;
+			this->room2->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// room1
+			// 
+			this->room1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->room1->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->room1->Location = System::Drawing::Point(223, 38);
+			this->room1->Name = L"room1";
+			this->room1->Size = System::Drawing::Size(140, 140);
+			this->room1->TabIndex = 44;
+			this->room1->Text = L"1";
+			this->room1->UseVisualStyleBackColor = true;
+			this->room1->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->textBox1->Location = System::Drawing::Point(1114, 38);
+			this->textBox1->Multiline = true;
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->ReadOnly = true;
+			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->textBox1->Size = System::Drawing::Size(278, 500);
+			this->textBox1->TabIndex = 43;
+			this->textBox1->Tag = L"";
+			// 
+			// monthCalendar1
+			// 
+			this->monthCalendar1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->monthCalendar1->BackColor = System::Drawing::Color::RoyalBlue;
+			this->monthCalendar1->CalendarDimensions = System::Drawing::Size(1, 2);
+			this->monthCalendar1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->monthCalendar1->Location = System::Drawing::Point(9, 29);
+			this->monthCalendar1->MaxSelectionCount = 1;
+			this->monthCalendar1->Name = L"monthCalendar1";
+			this->monthCalendar1->TabIndex = 59;
+			this->monthCalendar1->TitleBackColor = System::Drawing::Color::Maroon;
+			this->monthCalendar1->TitleForeColor = System::Drawing::Color::Maroon;
+			this->monthCalendar1->TrailingForeColor = System::Drawing::Color::Maroon;
+			this->monthCalendar1->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MainWindow::monthCalendar1_DateChanged);
+			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::LightGray;
@@ -314,238 +546,6 @@ namespace HotelProgram {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MainWindow::button2_Click_1);
 			// 
-			// room15
-			// 
-			this->room15->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room15->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room15->Location = System::Drawing::Point(931, 402);
-			this->room15->Name = L"room15";
-			this->room15->Size = System::Drawing::Size(140, 140);
-			this->room15->TabIndex = 58;
-			this->room15->Text = L"15";
-			this->room15->UseVisualStyleBackColor = true;
-			this->room15->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room14
-			// 
-			this->room14->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room14->BackColor = System::Drawing::Color::DarkGray;
-			this->room14->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room14->Location = System::Drawing::Point(754, 402);
-			this->room14->Name = L"room14";
-			this->room14->Size = System::Drawing::Size(140, 140);
-			this->room14->TabIndex = 57;
-			this->room14->Text = L"14";
-			this->room14->UseVisualStyleBackColor = false;
-			this->room14->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room13
-			// 
-			this->room13->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room13->BackColor = System::Drawing::Color::PaleGreen;
-			this->room13->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room13->Location = System::Drawing::Point(577, 402);
-			this->room13->Name = L"room13";
-			this->room13->Size = System::Drawing::Size(140, 140);
-			this->room13->TabIndex = 56;
-			this->room13->Text = L"13";
-			this->room13->UseVisualStyleBackColor = false;
-			this->room13->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room12
-			// 
-			this->room12->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room12->BackColor = System::Drawing::Color::LightCoral;
-			this->room12->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room12->Location = System::Drawing::Point(400, 402);
-			this->room12->Name = L"room12";
-			this->room12->Size = System::Drawing::Size(140, 140);
-			this->room12->TabIndex = 55;
-			this->room12->Text = L"12";
-			this->room12->UseVisualStyleBackColor = false;
-			this->room12->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room11
-			// 
-			this->room11->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room11->BackColor = System::Drawing::Color::PaleGoldenrod;
-			this->room11->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room11->Location = System::Drawing::Point(223, 402);
-			this->room11->Name = L"room11";
-			this->room11->Size = System::Drawing::Size(140, 140);
-			this->room11->TabIndex = 54;
-			this->room11->Text = L"11";
-			this->room11->UseVisualStyleBackColor = false;
-			this->room11->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room10
-			// 
-			this->room10->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room10->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room10->Location = System::Drawing::Point(931, 222);
-			this->room10->Name = L"room10";
-			this->room10->Size = System::Drawing::Size(140, 140);
-			this->room10->TabIndex = 53;
-			this->room10->Text = L"10";
-			this->room10->UseVisualStyleBackColor = true;
-			this->room10->Click += gcnew System::EventHandler(this, &MainWindow::room10_Click);
-			// 
-			// room9
-			// 
-			this->room9->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room9->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room9->Location = System::Drawing::Point(754, 222);
-			this->room9->Name = L"room9";
-			this->room9->Size = System::Drawing::Size(140, 140);
-			this->room9->TabIndex = 52;
-			this->room9->Text = L"9";
-			this->room9->UseVisualStyleBackColor = true;
-			this->room9->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room8
-			// 
-			this->room8->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room8->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room8->Location = System::Drawing::Point(577, 222);
-			this->room8->Name = L"room8";
-			this->room8->Size = System::Drawing::Size(140, 140);
-			this->room8->TabIndex = 51;
-			this->room8->Text = L"8";
-			this->room8->UseVisualStyleBackColor = true;
-			this->room8->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room7
-			// 
-			this->room7->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room7->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room7->Location = System::Drawing::Point(400, 222);
-			this->room7->Name = L"room7";
-			this->room7->Size = System::Drawing::Size(140, 140);
-			this->room7->TabIndex = 50;
-			this->room7->Text = L"7";
-			this->room7->UseVisualStyleBackColor = true;
-			this->room7->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room6
-			// 
-			this->room6->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room6->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room6->Location = System::Drawing::Point(223, 222);
-			this->room6->Name = L"room6";
-			this->room6->Size = System::Drawing::Size(140, 140);
-			this->room6->TabIndex = 49;
-			this->room6->Text = L"6";
-			this->room6->UseVisualStyleBackColor = true;
-			this->room6->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room5
-			// 
-			this->room5->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room5->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room5->Location = System::Drawing::Point(931, 42);
-			this->room5->Name = L"room5";
-			this->room5->Size = System::Drawing::Size(140, 140);
-			this->room5->TabIndex = 48;
-			this->room5->Text = L"5";
-			this->room5->UseVisualStyleBackColor = true;
-			this->room5->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room4
-			// 
-			this->room4->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room4->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room4->Location = System::Drawing::Point(754, 42);
-			this->room4->Name = L"room4";
-			this->room4->Size = System::Drawing::Size(140, 140);
-			this->room4->TabIndex = 47;
-			this->room4->Text = L"4";
-			this->room4->UseVisualStyleBackColor = true;
-			this->room4->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room3
-			// 
-			this->room3->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room3->BackColor = System::Drawing::Color::Transparent;
-			this->room3->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room3->Location = System::Drawing::Point(577, 42);
-			this->room3->Name = L"room3";
-			this->room3->Size = System::Drawing::Size(140, 140);
-			this->room3->TabIndex = 46;
-			this->room3->Text = L"3";
-			this->room3->UseVisualStyleBackColor = false;
-			this->room3->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room2
-			// 
-			this->room2->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room2->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room2->Location = System::Drawing::Point(400, 42);
-			this->room2->Name = L"room2";
-			this->room2->Size = System::Drawing::Size(140, 140);
-			this->room2->TabIndex = 45;
-			this->room2->Text = L"2";
-			this->room2->UseVisualStyleBackColor = true;
-			this->room2->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// room1
-			// 
-			this->room1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->room1->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->room1->Location = System::Drawing::Point(223, 42);
-			this->room1->Name = L"room1";
-			this->room1->Size = System::Drawing::Size(140, 140);
-			this->room1->TabIndex = 44;
-			this->room1->Text = L"1";
-			this->room1->UseVisualStyleBackColor = true;
-			this->room1->Click += gcnew System::EventHandler(this, &MainWindow::room9_Click);
-			// 
-			// textBox1
-			// 
-			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Constantia", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(1114, 42);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBox1->Size = System::Drawing::Size(278, 500);
-			this->textBox1->TabIndex = 43;
-			this->textBox1->Tag = L"";
-			// 
-			// monthCalendar1
-			// 
-			this->monthCalendar1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->monthCalendar1->BackColor = System::Drawing::Color::RoyalBlue;
-			this->monthCalendar1->CalendarDimensions = System::Drawing::Size(1, 2);
-			this->monthCalendar1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->monthCalendar1->Location = System::Drawing::Point(9, 37);
-			this->monthCalendar1->MaxSelectionCount = 1;
-			this->monthCalendar1->Name = L"monthCalendar1";
-			this->monthCalendar1->TabIndex = 59;
-			this->monthCalendar1->TitleBackColor = System::Drawing::Color::Maroon;
-			this->monthCalendar1->TitleForeColor = System::Drawing::Color::Maroon;
-			this->monthCalendar1->TrailingForeColor = System::Drawing::Color::Maroon;
-			this->monthCalendar1->DateChanged += gcnew System::Windows::Forms::DateRangeEventHandler(this, &MainWindow::monthCalendar1_DateChanged);
-			// 
 			// MainWindow
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
@@ -574,7 +574,7 @@ namespace HotelProgram {
 #pragma endregion
 		
 
-		System::Drawing::Color GetColor(DataBase::Date datearrival, DataBase::Date datedepart, System::DateTime date) {
+	System::Drawing::Color GetColor(DataBase::Date datearrival, DataBase::Date datedepart, System::DateTime date) {
 			System::DateTime datedep(datedepart.year, datedepart.month, datedepart.day);
 			System::DateTime datearr(datearrival.year, datearrival.month, datearrival.day);
 			if (date <= datedep && date >= datearr) {
@@ -697,8 +697,11 @@ namespace HotelProgram {
 				continue;
 			}
 			DataBase::Record guest;
-			if (DataBase::FindGuest(rooms[i].number, guests, guest)) {
+			if (DataBase::FindGuests(rooms[i].number, guests, guest, monthCalendar1->SelectionStart)) {
 				System::Drawing::Color color = GetColor(guest.arrival, guest.departure, monthCalendar1->SelectionStart);
+				
+				
+				
 				if (color == System::Drawing::Color::PaleGreen)
 					continue;
 				switch (rooms[i].number) {
@@ -757,13 +760,13 @@ namespace HotelProgram {
 		
 		for (int i = 0; i < records.size(); i++) {
 			if (records[i].departure.day == date->tm_mday && records[i].departure.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " сьогодні має звільнити кімнату." + Environment::NewLine + "-----------------------------------------------";
+				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " сьогодні має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
 			}
 			else if (records[i].arrival.day == date->tm_mday+1 && records[i].arrival.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " прибуде завтра в кімнату №" + gcnew System::String(std::to_string(records[i].room).c_str()) + Environment::NewLine + "-----------------------------------------------";
+				textBox1->Text += gcnew System::String(records[i].Name) + " прибуде завтра в кімнату №" + gcnew System::String(std::to_string(records[i].room).c_str()) + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
 			}
 			else if (records[i].departure.day == date->tm_mday + 1 && records[i].departure.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " завтра має звільнити кімнату." + Environment::NewLine + "-----------------------------------------------";
+				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " завтра має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
 			}
 		}
 	}
@@ -821,6 +824,8 @@ private: System::Void room9_Click(System::Object^ sender, System::EventArgs^ e) 
 	String^ d = sender->ToString();
 	d = d[35].ToString();
 	Info::number = Int32::Parse(d);
+	Info::date.setDate(monthCalendar1->SelectionRange->Start);
+	Info::datestr = Info::date.GetDate_str();
 	RoomInfo info;
 	info.ShowDialog();
 }
@@ -828,14 +833,15 @@ private: System::Void room10_Click(System::Object^ sender, System::EventArgs^ e)
 	String^ d = sender->ToString();
 	d = d[35].ToString() + d[36].ToString();
 	Info::number = Int32::Parse(d);
-	Info::date = msclr::interop::marshal_as<std::string>(monthCalendar1->SelectionRange->Start.ToString());
+	Info::date.setDate(monthCalendar1->SelectionRange->Start);
+	Info::datestr = Info::date.GetDate_str();
 	RoomInfo info;
 	info.ShowDialog();
 }
-	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		AdmPass admin;
-		admin.ShowDialog();
-	}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	AdmPass admin;
+	admin.ShowDialog();
+}
 private: System::Void monthCalendar1_DateChanged(System::Object^ sender, System::Windows::Forms::DateRangeEventArgs^ e) {
 	WriteButtons();
 }

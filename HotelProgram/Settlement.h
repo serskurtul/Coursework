@@ -231,7 +231,7 @@ namespace HotelProgram {
 
 		}
 #pragma endregion
-		void Introduction(std::vector<Admin::Room> &rooms) {
+		bool Introduction(std::vector<Admin::Room> &rooms) {
 			
 			DataBase::Record Newrecord;
 			Newrecord.room = Decimal::ToInt32(numericUpDown1->Value);
@@ -243,7 +243,7 @@ namespace HotelProgram {
 			for (int i = 0; i < rooms.size(); i++) {
 				if (rooms[i].number == Newrecord.room && rooms[i].nonavaible)
 				{
-					MessageBox::Show("Кімната недоступна!"); return;
+					MessageBox::Show("Кімната недоступна!"); return false;
 				}
 			}
 
@@ -261,30 +261,40 @@ namespace HotelProgram {
 			// пошук в векторі oldrecords
 			for (int i = 0; i < oldrecords.size(); i++) {
 				if (oldrecords[i].room == Newrecord.room) {
-					if (MessageBox::Show("Такий запис вже наявний, бажаєте ЗМІНИТИ його", "", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
-						oldrecords[i] = Newrecord;
-						std::ofstream f;
-						f.open(DataBase::PATH_TO_DataBase, std::ios_base::out | std::ios_base::binary);
-						f.close();
+					System::DateTime olddep(oldrecords[i].departure.year, oldrecords[i].departure.month, oldrecords[i].departure.day);
+					System::DateTime oldarr(oldrecords[i].arrival.year, oldrecords[i].arrival.month, oldrecords[i].arrival.day);
+					System::DateTime newdep(Newrecord.departure.year, Newrecord.departure.month, Newrecord.departure.day);
+					System::DateTime newarr(Newrecord.arrival.year, Newrecord.arrival.month, Newrecord.arrival.day);
+					if (newarr >= oldarr && newarr <= olddep || newdep >= oldarr && newdep <= olddep) {
+						if (MessageBox::Show("На такі дати кімната зайнята, хочете змінити наявне посенення", "Попередження", MessageBoxButtons::YesNo) == System::Windows::Forms::DialogResult::Yes) {
+							oldrecords[i] = Newrecord;
+							std::ofstream f;
+							f.open(DataBase::PATH_TO_DataBase, std::ios_base::out | std::ios_base::binary);
+							f.close();
 
-						for (int i1 = 0; i1 < oldrecords.size(); i1++) {
-							DataBase::introduction(oldrecords[i1]);
+							for (int i1 = 0; i1 < oldrecords.size(); i1++) {
+								DataBase::introduction(oldrecords[i1]);
+							}
+							return true;
 						}
+						else
+							return false;
 					}
-					return;
+					
+					
 				}
 			}
 			oldrecords.push_back(Newrecord);
 			DataBase::introduction(Newrecord);
+			return true;		
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		std::vector<Admin::Room> rooms = Info::GetInfo();
-		Introduction(rooms);
-		
-		this->Close();
+		if (Introduction(rooms))
+			this->Close();
 	}
 private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-	this->dateTimePicker2->MinDate = dateTimePicker1->Value;
+	this->dateTimePicker2->MinDate = dateTimePicker1->Value.AddDays(1);
 }
 private: System::Void Settlement_Load(System::Object^ sender, System::EventArgs^ e) {
 	time_t now = time(0);

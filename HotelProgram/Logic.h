@@ -8,10 +8,10 @@
 
 
 namespace LOGIN {
-	std::string password = "none";
+	std::string password;
 	std::string login;
 	bool success_login = 0;
-	std::string PATH_TO_PASSWORD = "D:/Projects/labs/Курсова/HotelProgram/HotelProgram/password.txt";
+	std::string PATH_TO_PASSWORD = "password.txt";
 	void setPasswordLogin() {
 		std::ifstream f;
 		f.open(PATH_TO_PASSWORD, std::ios_base::app);
@@ -70,15 +70,56 @@ namespace DataBase {
 			phone[tempphone.length()] = '\0';
 		}
 	};
-	bool FindGuest(int number, std::vector<Record> records, Record &newrecord) {
+	bool FindGuests(int number, std::vector<Record> records, Record& newrecord, System::DateTime date) {
+		bool status = false;
 		for (int i = 0; i < records.size(); i++) {
 			if (records[i].room == number) {
-				newrecord = records[i];
-				return true;
+				System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
+				System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+				if (date >= arr && date <= dep) {
+					newrecord = records[i];
+					return true;
+				}
+				
 			}
 		}
-		return false;
+		for (int i = 0; i < records.size(); i++) {
+			if (records[i].room == number) {
+				System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
+				System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+				if (date < arr) {
+					newrecord = records[i];
+					return true;
+				}
+			}
+		}
+		
+		
+		return status;
 	}
+	bool FindGuests(int number, std::vector<Record>& newrecords) {
+		bool status = false;
+		std::vector<Record> records;
+		std::ifstream f;
+		f.open(PATH_TO_DataBase, std::ios_base::app | std::ios_base::binary);
+		if (f.is_open()) {
+			Record temp;
+			for (int i = 0; f.read((char*)&temp, sizeof(Record)); i++) {
+				records.push_back(temp);
+			}
+		}
+		else { System::Windows::Forms::MessageBox::Show("Не вдалося відкрити файл"); exit(0); }
+
+		for (int i = 0; i < records.size(); i++) {
+			if (records[i].room == number) {
+				newrecords.push_back(records[i]);
+				status = true;
+			}
+		}
+
+		return status;
+	}
+	
 
 	int GetDays(Date date) {
 		int days;
@@ -187,7 +228,8 @@ namespace Admin {
 
 namespace Info {
 	int number;
-	std::string date;
+	std::string datestr;
+	DataBase::Date date;
 	Admin::Room GetRoom(int number) {
 		std::vector<Admin::Room> rooms;
 		std::ifstream f;

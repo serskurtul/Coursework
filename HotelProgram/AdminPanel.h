@@ -367,6 +367,7 @@ namespace HotelProgram {
 			this->textBox3->Location = System::Drawing::Point(204, 84);
 			this->textBox3->Multiline = true;
 			this->textBox3->Name = L"textBox3";
+			this->textBox3->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
 			this->textBox3->Size = System::Drawing::Size(388, 95);
 			this->textBox3->TabIndex = 0;
 			// 

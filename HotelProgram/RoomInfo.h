@@ -114,7 +114,7 @@ namespace HotelProgram {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(63, 301);
+			this->label4->Location = System::Drawing::Point(63, 377);
 			this->label4->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(107, 37);
@@ -131,15 +131,17 @@ namespace HotelProgram {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(287, 178);
+			this->textBox2->Location = System::Drawing::Point(287, 181);
+			this->textBox2->Multiline = true;
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(260, 44);
+			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->textBox2->Size = System::Drawing::Size(331, 115);
 			this->textBox2->TabIndex = 5;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(287, 294);
+			this->textBox3->Location = System::Drawing::Point(287, 370);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
 			this->textBox3->Size = System::Drawing::Size(260, 44);
@@ -149,7 +151,7 @@ namespace HotelProgram {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Constantia", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(287, 357);
+			this->button1->Location = System::Drawing::Point(287, 433);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(260, 45);
 			this->button1->TabIndex = 8;
@@ -163,7 +165,7 @@ namespace HotelProgram {
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Constantia", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label10->Location = System::Drawing::Point(412, 243);
+			this->label10->Location = System::Drawing::Point(412, 319);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(57, 29);
 			this->label10->TabIndex = 16;
@@ -173,7 +175,7 @@ namespace HotelProgram {
 			// 
 			this->textBox5->Font = (gcnew System::Drawing::Font(L"Constantia", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox5->Location = System::Drawing::Point(287, 236);
+			this->textBox5->Location = System::Drawing::Point(287, 312);
 			this->textBox5->Multiline = true;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->ReadOnly = true;
@@ -183,7 +185,7 @@ namespace HotelProgram {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(63, 236);
+			this->label6->Location = System::Drawing::Point(63, 312);
 			this->label6->Margin = System::Windows::Forms::Padding(6, 0, 6, 0);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(218, 37);
@@ -194,7 +196,7 @@ namespace HotelProgram {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
-			this->ClientSize = System::Drawing::Size(646, 420);
+			this->ClientSize = System::Drawing::Size(646, 502);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->textBox5);
@@ -220,15 +222,23 @@ namespace HotelProgram {
 #pragma endregion
 	private: System::Void RoomInfo_Load(System::Object^ sender, System::EventArgs^ e) {
 		Admin::Room room = Info::GetRoom(Info::number);
-		label1->Text += gcnew String(Info::date.c_str());
+		label1->Text += gcnew String(Info::datestr.c_str());
 		textBox1->Text = room.number.ToString();
 		textBox2->Text = gcnew System::String(room.description);
 		textBox5->Text = gcnew  System::String(room.price.ToString());
 		if (room.nonavaible) {
 			textBox3->Text = "ÕÂ‰ÓÒÚÛÔÌÓ";
 		} // “–≈¡¿ œ≈–≈¬≤ ” —“¿Õ”
-	
-		if (DataBase::GetRecord(Info::number, record)) {
+		std::vector<DataBase::Record> records;
+		if (DataBase::FindGuests(Info::number, records)) {
+			for (int i = 0; i < records.size(); i++) {
+				System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
+				System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+				System::DateTime date(Info::date.year, Info::date.month, Info::date.day);
+				if (date >= arr && date <= dep){
+					record = records[i];
+				}
+			}
 			button1->Visible = true;
 		}
 	}
