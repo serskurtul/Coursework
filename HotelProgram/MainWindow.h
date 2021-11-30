@@ -48,7 +48,7 @@ namespace HotelProgram {
 	protected:
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button4;
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::TabControl^ tabControl1;
@@ -74,6 +74,14 @@ namespace HotelProgram {
 	private: System::Windows::Forms::Button^ main;
 	private: System::Windows::Forms::Button^ Guests;
 	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Button^ button8;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ button3;
 
 	protected:
 
@@ -94,15 +102,21 @@ namespace HotelProgram {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainWindow::typeid));
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->room15 = (gcnew System::Windows::Forms::Button());
 			this->room14 = (gcnew System::Windows::Forms::Button());
 			this->room13 = (gcnew System::Windows::Forms::Button());
@@ -136,14 +150,13 @@ namespace HotelProgram {
 			this->tabPage2->BackColor = System::Drawing::Color::Transparent;
 			this->tabPage2->Controls->Add(this->button5);
 			this->tabPage2->Controls->Add(this->label1);
-			this->tabPage2->Controls->Add(this->button4);
 			this->tabPage2->Controls->Add(this->button1);
 			this->tabPage2->Controls->Add(this->dataGridView1);
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Location = System::Drawing::Point(4, 33);
 			this->tabPage2->Margin = System::Windows::Forms::Padding(4);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(4);
-			this->tabPage2->Size = System::Drawing::Size(1422, 584);
+			this->tabPage2->Size = System::Drawing::Size(1422, 583);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			// 
@@ -173,19 +186,6 @@ namespace HotelProgram {
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"Наявні поселення";
 			// 
-			// button4
-			// 
-			this->button4->BackColor = System::Drawing::Color::Gainsboro;
-			this->button4->FlatAppearance->BorderSize = 0;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->Location = System::Drawing::Point(14, 476);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(127, 93);
-			this->button4->TabIndex = 20;
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &MainWindow::MainWindow_Load);
-			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Gainsboro;
@@ -193,11 +193,11 @@ namespace HotelProgram {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Constantia", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button1->Location = System::Drawing::Point(165, 476);
+			this->button1->Location = System::Drawing::Point(14, 476);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(244, 93);
+			this->button1->Size = System::Drawing::Size(327, 93);
 			this->button1->TabIndex = 14;
-			this->button1->Text = L"Поселення";
+			this->button1->Text = L"Поселити";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MainWindow::button1_Click_1);
 			// 
@@ -227,12 +227,20 @@ namespace HotelProgram {
 			this->tabControl1->Margin = System::Windows::Forms::Padding(4);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1430, 613);
+			this->tabControl1->Size = System::Drawing::Size(1430, 620);
 			this->tabControl1->TabIndex = 0;
 			// 
 			// tabPage1
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::Transparent;
+			this->tabPage1->Controls->Add(this->label5);
+			this->tabPage1->Controls->Add(this->button8);
+			this->tabPage1->Controls->Add(this->label4);
+			this->tabPage1->Controls->Add(this->button7);
+			this->tabPage1->Controls->Add(this->label3);
+			this->tabPage1->Controls->Add(this->button6);
+			this->tabPage1->Controls->Add(this->label2);
+			this->tabPage1->Controls->Add(this->button3);
 			this->tabPage1->Controls->Add(this->room15);
 			this->tabPage1->Controls->Add(this->room14);
 			this->tabPage1->Controls->Add(this->room13);
@@ -254,16 +262,104 @@ namespace HotelProgram {
 			this->tabPage1->Margin = System::Windows::Forms::Padding(4);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(4);
-			this->tabPage1->Size = System::Drawing::Size(1422, 576);
+			this->tabPage1->Size = System::Drawing::Size(1422, 583);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"tabPage1";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Constantia", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(45, 548);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(122, 24);
+			this->label5->TabIndex = 67;
+			this->label5->Text = L"Недоступно";
+			// 
+			// button8
+			// 
+			this->button8->BackColor = System::Drawing::Color::DarkGray;
+			this->button8->Enabled = false;
+			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button8->Location = System::Drawing::Point(14, 547);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(25, 25);
+			this->button8->TabIndex = 66;
+			this->button8->UseVisualStyleBackColor = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Constantia", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label4->Location = System::Drawing::Point(45, 507);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(146, 24);
+			this->label4->TabIndex = 65;
+			this->label4->Text = L"Зарезервовано";
+			// 
+			// button7
+			// 
+			this->button7->BackColor = System::Drawing::Color::PaleGoldenrod;
+			this->button7->Enabled = false;
+			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button7->Location = System::Drawing::Point(14, 509);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(25, 25);
+			this->button7->TabIndex = 64;
+			this->button7->UseVisualStyleBackColor = false;
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Constantia", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label3->Location = System::Drawing::Point(45, 471);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(86, 24);
+			this->label3->TabIndex = 63;
+			this->label3->Text = L"Зайнято";
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::IndianRed;
+			this->button6->Enabled = false;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->Location = System::Drawing::Point(14, 470);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(25, 25);
+			this->button6->TabIndex = 62;
+			this->button6->UseVisualStyleBackColor = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Constantia", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(45, 435);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(72, 24);
+			this->label2->TabIndex = 61;
+			this->label2->Text = L"Вільно";
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::PaleGreen;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Location = System::Drawing::Point(14, 434);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(25, 25);
+			this->button3->TabIndex = 60;
+			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// room15
 			// 
 			this->room15->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room15->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room15->Location = System::Drawing::Point(931, 417);
+			this->room15->Location = System::Drawing::Point(933, 393);
 			this->room15->Name = L"room15";
 			this->room15->Size = System::Drawing::Size(140, 140);
 			this->room15->TabIndex = 58;
@@ -277,7 +373,7 @@ namespace HotelProgram {
 			this->room14->BackColor = System::Drawing::Color::DarkGray;
 			this->room14->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room14->Location = System::Drawing::Point(754, 417);
+			this->room14->Location = System::Drawing::Point(756, 393);
 			this->room14->Name = L"room14";
 			this->room14->Size = System::Drawing::Size(140, 140);
 			this->room14->TabIndex = 57;
@@ -291,7 +387,7 @@ namespace HotelProgram {
 			this->room13->BackColor = System::Drawing::Color::PaleGreen;
 			this->room13->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room13->Location = System::Drawing::Point(577, 417);
+			this->room13->Location = System::Drawing::Point(579, 393);
 			this->room13->Name = L"room13";
 			this->room13->Size = System::Drawing::Size(140, 140);
 			this->room13->TabIndex = 56;
@@ -305,7 +401,7 @@ namespace HotelProgram {
 			this->room12->BackColor = System::Drawing::Color::LightCoral;
 			this->room12->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room12->Location = System::Drawing::Point(400, 417);
+			this->room12->Location = System::Drawing::Point(402, 393);
 			this->room12->Name = L"room12";
 			this->room12->Size = System::Drawing::Size(140, 140);
 			this->room12->TabIndex = 55;
@@ -319,7 +415,7 @@ namespace HotelProgram {
 			this->room11->BackColor = System::Drawing::Color::PaleGoldenrod;
 			this->room11->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room11->Location = System::Drawing::Point(223, 417);
+			this->room11->Location = System::Drawing::Point(225, 393);
 			this->room11->Name = L"room11";
 			this->room11->Size = System::Drawing::Size(140, 140);
 			this->room11->TabIndex = 54;
@@ -332,7 +428,7 @@ namespace HotelProgram {
 			this->room10->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room10->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room10->Location = System::Drawing::Point(931, 237);
+			this->room10->Location = System::Drawing::Point(933, 213);
 			this->room10->Name = L"room10";
 			this->room10->Size = System::Drawing::Size(140, 140);
 			this->room10->TabIndex = 53;
@@ -345,7 +441,7 @@ namespace HotelProgram {
 			this->room9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room9->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room9->Location = System::Drawing::Point(754, 237);
+			this->room9->Location = System::Drawing::Point(756, 213);
 			this->room9->Name = L"room9";
 			this->room9->Size = System::Drawing::Size(140, 140);
 			this->room9->TabIndex = 52;
@@ -358,7 +454,7 @@ namespace HotelProgram {
 			this->room8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room8->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room8->Location = System::Drawing::Point(577, 237);
+			this->room8->Location = System::Drawing::Point(579, 213);
 			this->room8->Name = L"room8";
 			this->room8->Size = System::Drawing::Size(140, 140);
 			this->room8->TabIndex = 51;
@@ -371,7 +467,7 @@ namespace HotelProgram {
 			this->room7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room7->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room7->Location = System::Drawing::Point(400, 237);
+			this->room7->Location = System::Drawing::Point(402, 213);
 			this->room7->Name = L"room7";
 			this->room7->Size = System::Drawing::Size(140, 140);
 			this->room7->TabIndex = 50;
@@ -384,7 +480,7 @@ namespace HotelProgram {
 			this->room6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room6->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room6->Location = System::Drawing::Point(223, 237);
+			this->room6->Location = System::Drawing::Point(225, 213);
 			this->room6->Name = L"room6";
 			this->room6->Size = System::Drawing::Size(140, 140);
 			this->room6->TabIndex = 49;
@@ -397,7 +493,7 @@ namespace HotelProgram {
 			this->room5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room5->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room5->Location = System::Drawing::Point(931, 57);
+			this->room5->Location = System::Drawing::Point(933, 33);
 			this->room5->Name = L"room5";
 			this->room5->Size = System::Drawing::Size(140, 140);
 			this->room5->TabIndex = 48;
@@ -410,7 +506,7 @@ namespace HotelProgram {
 			this->room4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room4->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room4->Location = System::Drawing::Point(754, 57);
+			this->room4->Location = System::Drawing::Point(756, 33);
 			this->room4->Name = L"room4";
 			this->room4->Size = System::Drawing::Size(140, 140);
 			this->room4->TabIndex = 47;
@@ -424,7 +520,7 @@ namespace HotelProgram {
 			this->room3->BackColor = System::Drawing::Color::Transparent;
 			this->room3->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room3->Location = System::Drawing::Point(577, 57);
+			this->room3->Location = System::Drawing::Point(579, 33);
 			this->room3->Name = L"room3";
 			this->room3->Size = System::Drawing::Size(140, 140);
 			this->room3->TabIndex = 46;
@@ -437,7 +533,7 @@ namespace HotelProgram {
 			this->room2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room2->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room2->Location = System::Drawing::Point(400, 57);
+			this->room2->Location = System::Drawing::Point(402, 33);
 			this->room2->Name = L"room2";
 			this->room2->Size = System::Drawing::Size(140, 140);
 			this->room2->TabIndex = 45;
@@ -450,7 +546,7 @@ namespace HotelProgram {
 			this->room1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room1->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room1->Location = System::Drawing::Point(223, 57);
+			this->room1->Location = System::Drawing::Point(225, 33);
 			this->room1->Name = L"room1";
 			this->room1->Size = System::Drawing::Size(140, 140);
 			this->room1->TabIndex = 44;
@@ -465,7 +561,7 @@ namespace HotelProgram {
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(1114, 57);
+			this->textBox1->Location = System::Drawing::Point(1116, 33);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
@@ -481,7 +577,7 @@ namespace HotelProgram {
 			this->monthCalendar1->CalendarDimensions = System::Drawing::Size(1, 2);
 			this->monthCalendar1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->monthCalendar1->Location = System::Drawing::Point(9, 57);
+			this->monthCalendar1->Location = System::Drawing::Point(9, 29);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 59;
@@ -496,7 +592,7 @@ namespace HotelProgram {
 			this->panel1->Controls->Add(this->Guests);
 			this->panel1->Controls->Add(this->main);
 			this->panel1->Controls->Add(this->button2);
-			this->panel1->Location = System::Drawing::Point(-6, 0);
+			this->panel1->Location = System::Drawing::Point(190, 2);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(1430, 71);
 			this->panel1->TabIndex = 1;
@@ -597,7 +693,7 @@ namespace HotelProgram {
 			return;
 		std::string ** data = new std::string*[size];
 		for (int i = 0; i < size; i++) {
-			data[i] = new std::string [5];
+			data[i] = new std::string [6];
 		}
 		for (int i = 0; i < size; i++) {
 			data[i][0] = std::to_string(records[i].room);
@@ -605,18 +701,20 @@ namespace HotelProgram {
 			data[i][2] = records[i].phone;
 			data[i][3] = records[i].arrival.GetDate_str();
 			data[i][4] = records[i].departure.GetDate_str();
+			data[i][5] = records[i].price;
 		}
 		
-		dataGridView->ColumnCount = 5;
+		dataGridView->ColumnCount = 6;
 		dataGridView->Columns[0]->Name = "Номер";
 		dataGridView->Columns[1]->Name = "Ім'я";
 		dataGridView->Columns[2]->Name = "Телефон";
 		dataGridView->Columns[3]->Name = "Дата прибуття";
 		dataGridView->Columns[4]->Name = "Дата відправлення";
+		dataGridView->Columns[5]->Name = "Ціна";
 		
 		dataGridView->Rows->Add(size);
 		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < 5; j++) {
+			for (int j = 0; j < 6; j++) {
 				dataGridView->Rows[i]->Cells[j]->Value = gcnew String(data[i][j].c_str());
 			}
 		}	
@@ -861,5 +959,8 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	oldguests old;
 	old.ShowDialog();
 }
+
+
+
 };
 }

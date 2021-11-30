@@ -55,6 +55,7 @@ namespace DataBase {
 		char phone[15];
 		Date arrival;
 		Date departure;
+		int price;
 		void SetName(System::String^ desc) {
 			std::string nameS = msclr::interop::marshal_as<std::string>(desc);
 			for (int i = 0; i < nameS.length(); i++) {
