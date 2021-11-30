@@ -265,13 +265,17 @@ namespace HotelProgram {
 				}
 				break;
 			case 1:
+				System::DateTime date1(3000,1,1);
+				DataBase::Record fordate1;
 				for (int i = 0; i < records.size(); i++) {
 					System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
 					System::DateTime date(Info::date.year, Info::date.month, Info::date.day);
 					if (date < arr) {
-						record = records[i];
-						button1->Visible = true;
-						return;
+						if (arr < date1) {
+							date1 = System::DateTime(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+							record = records[i];
+							button1->Visible = true;
+						}
 					}
 				}
 			}

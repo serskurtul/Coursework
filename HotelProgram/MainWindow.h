@@ -139,11 +139,11 @@ namespace HotelProgram {
 			this->tabPage2->Controls->Add(this->button4);
 			this->tabPage2->Controls->Add(this->button1);
 			this->tabPage2->Controls->Add(this->dataGridView1);
-			this->tabPage2->Location = System::Drawing::Point(4, 33);
+			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Margin = System::Windows::Forms::Padding(4);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(4);
-			this->tabPage2->Size = System::Drawing::Size(1422, 576);
+			this->tabPage2->Size = System::Drawing::Size(1422, 584);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			// 
@@ -263,7 +263,7 @@ namespace HotelProgram {
 			this->room15->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room15->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room15->Location = System::Drawing::Point(931, 390);
+			this->room15->Location = System::Drawing::Point(931, 417);
 			this->room15->Name = L"room15";
 			this->room15->Size = System::Drawing::Size(140, 140);
 			this->room15->TabIndex = 58;
@@ -277,7 +277,7 @@ namespace HotelProgram {
 			this->room14->BackColor = System::Drawing::Color::DarkGray;
 			this->room14->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room14->Location = System::Drawing::Point(754, 390);
+			this->room14->Location = System::Drawing::Point(754, 417);
 			this->room14->Name = L"room14";
 			this->room14->Size = System::Drawing::Size(140, 140);
 			this->room14->TabIndex = 57;
@@ -291,7 +291,7 @@ namespace HotelProgram {
 			this->room13->BackColor = System::Drawing::Color::PaleGreen;
 			this->room13->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room13->Location = System::Drawing::Point(577, 390);
+			this->room13->Location = System::Drawing::Point(577, 417);
 			this->room13->Name = L"room13";
 			this->room13->Size = System::Drawing::Size(140, 140);
 			this->room13->TabIndex = 56;
@@ -305,7 +305,7 @@ namespace HotelProgram {
 			this->room12->BackColor = System::Drawing::Color::LightCoral;
 			this->room12->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room12->Location = System::Drawing::Point(400, 390);
+			this->room12->Location = System::Drawing::Point(400, 417);
 			this->room12->Name = L"room12";
 			this->room12->Size = System::Drawing::Size(140, 140);
 			this->room12->TabIndex = 55;
@@ -319,7 +319,7 @@ namespace HotelProgram {
 			this->room11->BackColor = System::Drawing::Color::PaleGoldenrod;
 			this->room11->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room11->Location = System::Drawing::Point(223, 390);
+			this->room11->Location = System::Drawing::Point(223, 417);
 			this->room11->Name = L"room11";
 			this->room11->Size = System::Drawing::Size(140, 140);
 			this->room11->TabIndex = 54;
@@ -332,7 +332,7 @@ namespace HotelProgram {
 			this->room10->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room10->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room10->Location = System::Drawing::Point(931, 210);
+			this->room10->Location = System::Drawing::Point(931, 237);
 			this->room10->Name = L"room10";
 			this->room10->Size = System::Drawing::Size(140, 140);
 			this->room10->TabIndex = 53;
@@ -345,7 +345,7 @@ namespace HotelProgram {
 			this->room9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room9->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room9->Location = System::Drawing::Point(754, 210);
+			this->room9->Location = System::Drawing::Point(754, 237);
 			this->room9->Name = L"room9";
 			this->room9->Size = System::Drawing::Size(140, 140);
 			this->room9->TabIndex = 52;
@@ -358,7 +358,7 @@ namespace HotelProgram {
 			this->room8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room8->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room8->Location = System::Drawing::Point(577, 210);
+			this->room8->Location = System::Drawing::Point(577, 237);
 			this->room8->Name = L"room8";
 			this->room8->Size = System::Drawing::Size(140, 140);
 			this->room8->TabIndex = 51;
@@ -371,7 +371,7 @@ namespace HotelProgram {
 			this->room7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room7->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room7->Location = System::Drawing::Point(400, 210);
+			this->room7->Location = System::Drawing::Point(400, 237);
 			this->room7->Name = L"room7";
 			this->room7->Size = System::Drawing::Size(140, 140);
 			this->room7->TabIndex = 50;
@@ -384,7 +384,7 @@ namespace HotelProgram {
 			this->room6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room6->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room6->Location = System::Drawing::Point(223, 210);
+			this->room6->Location = System::Drawing::Point(223, 237);
 			this->room6->Name = L"room6";
 			this->room6->Size = System::Drawing::Size(140, 140);
 			this->room6->TabIndex = 49;
@@ -397,7 +397,7 @@ namespace HotelProgram {
 			this->room5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room5->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room5->Location = System::Drawing::Point(931, 30);
+			this->room5->Location = System::Drawing::Point(931, 57);
 			this->room5->Name = L"room5";
 			this->room5->Size = System::Drawing::Size(140, 140);
 			this->room5->TabIndex = 48;
@@ -410,7 +410,7 @@ namespace HotelProgram {
 			this->room4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room4->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room4->Location = System::Drawing::Point(754, 30);
+			this->room4->Location = System::Drawing::Point(754, 57);
 			this->room4->Name = L"room4";
 			this->room4->Size = System::Drawing::Size(140, 140);
 			this->room4->TabIndex = 47;
@@ -424,7 +424,7 @@ namespace HotelProgram {
 			this->room3->BackColor = System::Drawing::Color::Transparent;
 			this->room3->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room3->Location = System::Drawing::Point(577, 30);
+			this->room3->Location = System::Drawing::Point(577, 57);
 			this->room3->Name = L"room3";
 			this->room3->Size = System::Drawing::Size(140, 140);
 			this->room3->TabIndex = 46;
@@ -437,7 +437,7 @@ namespace HotelProgram {
 			this->room2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room2->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room2->Location = System::Drawing::Point(400, 30);
+			this->room2->Location = System::Drawing::Point(400, 57);
 			this->room2->Name = L"room2";
 			this->room2->Size = System::Drawing::Size(140, 140);
 			this->room2->TabIndex = 45;
@@ -450,7 +450,7 @@ namespace HotelProgram {
 			this->room1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->room1->Font = (gcnew System::Drawing::Font(L"Footlight MT Light", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->room1->Location = System::Drawing::Point(223, 30);
+			this->room1->Location = System::Drawing::Point(223, 57);
 			this->room1->Name = L"room1";
 			this->room1->Size = System::Drawing::Size(140, 140);
 			this->room1->TabIndex = 44;
@@ -465,7 +465,7 @@ namespace HotelProgram {
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->textBox1->Location = System::Drawing::Point(1114, 30);
+			this->textBox1->Location = System::Drawing::Point(1114, 57);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
@@ -481,7 +481,7 @@ namespace HotelProgram {
 			this->monthCalendar1->CalendarDimensions = System::Drawing::Size(1, 2);
 			this->monthCalendar1->Font = (gcnew System::Drawing::Font(L"Constantia", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->monthCalendar1->Location = System::Drawing::Point(9, 13);
+			this->monthCalendar1->Location = System::Drawing::Point(9, 57);
 			this->monthCalendar1->MaxSelectionCount = 1;
 			this->monthCalendar1->Name = L"monthCalendar1";
 			this->monthCalendar1->TabIndex = 59;
@@ -757,18 +757,26 @@ namespace HotelProgram {
 	void WriteInfo() {
 		std::vector<DataBase::Record> records = DataBase::GetInfo();
 		textBox1->Text = "";
-		
-		for (int i = 0; i < records.size(); i++) {
-			if (records[i].departure.day == date->tm_mday && records[i].departure.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " сьогодні має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
+		//date->tm_mday+1 && records[i].arrival.month == date->tm_mon + 1
+
+
+			for (int i = 0; i < records.size(); i++) {
+				System::DateTime arr(records[i].arrival.year, records[i].arrival.month, records[i].arrival.day);
+				System::DateTime dep(records[i].departure.year, records[i].departure.month, records[i].departure.day);
+
+				System::DateTime today(System::DateTime::Now);
+				System::DateTime tomorrow(today.AddDays(1));
+				if (arr == today) {
+					textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " сьогодні має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
+				}
+				
+				else if (arr.Day == tomorrow.Day && arr.Month == tomorrow.Month) {
+					textBox1->Text += gcnew System::String(records[i].Name) + " прибуде завтра в кімнату №" + gcnew System::String(std::to_string(records[i].room).c_str()) + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
+				}
+				else if (dep.Day == tomorrow.Day && dep.Month == tomorrow.Month) {
+					textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " завтра має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
+				}
 			}
-			else if (records[i].arrival.day == date->tm_mday+1 && records[i].arrival.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " прибуде завтра в кімнату №" + gcnew System::String(std::to_string(records[i].room).c_str()) + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
-			}
-			else if (records[i].departure.day == date->tm_mday + 1 && records[i].departure.month == date->tm_mon + 1) {
-				textBox1->Text += gcnew System::String(records[i].Name) + " з кімнати №" + gcnew System::String(std::to_string(records[i].room).c_str()) + " завтра має звільнити кімнату." + Environment::NewLine + "--------------------------------------------" + Environment::NewLine;
-			}
-		}
 	}
 	private: System::Void MainWindow_Load(System::Object^ sender, System::EventArgs^ e) {	monthCalendar1->MinDate = DateTime::Now;
 		std::vector<DataBase::Record> records = DataBase::GetInfo();
