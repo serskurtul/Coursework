@@ -78,6 +78,7 @@ namespace HotelProgram {
 				static_cast<System::Byte>(204)));
 			this->textBox2->Location = System::Drawing::Point(225, 54);
 			this->textBox2->Name = L"textBox2";
+			this->textBox2->PasswordChar = '*';
 			this->textBox2->Size = System::Drawing::Size(221, 40);
 			this->textBox2->TabIndex = 8;
 			this->textBox2->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &AdmPass::textBox2_KeyDown);

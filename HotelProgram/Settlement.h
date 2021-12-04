@@ -283,6 +283,7 @@ namespace HotelProgram {
 			Newrecord.SetPhone(textBox3->Text);
 			Newrecord.arrival.setDate(dateTimePicker1->Value);
 			Newrecord.departure.setDate(dateTimePicker2->Value);
+			Newrecord.price = Convert::ToInt32(textBox3->Text);
 
 			for (int i = 0; i < rooms.size(); i++) {
 				if (rooms[i].number == Newrecord.room && rooms[i].nonavaible)

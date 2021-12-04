@@ -117,6 +117,7 @@ namespace HotelProgram {
 				static_cast<System::Byte>(204)));
 			this->textBox2->Location = System::Drawing::Point(282, 199);
 			this->textBox2->Name = L"textBox2";
+			this->textBox2->PasswordChar = '*';
 			this->textBox2->Size = System::Drawing::Size(221, 40);
 			this->textBox2->TabIndex = 2;
 			// 
