@@ -353,7 +353,7 @@ private: System::Void dateTimePicker2_ValueChanged(System::Object^ sender, Syste
 	std::vector<Admin::Room> rooms = Info::GetInfo();
 	for (int i = 0; i < rooms.size(); i++) {
 		if (Decimal::ToInt32(numericUpDown1->Value) == rooms[i].number) {
-			System::TimeSpan days = dateTimePicker2->Value - dateTimePicker1->Value;
+			System::TimeSpan days = dateTimePicker2->Value.AddHours(12) - dateTimePicker1->Value;
 			textBox1->Text = (days.Days * rooms[i].price).ToString();
 		}
 	}
